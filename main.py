@@ -39,5 +39,9 @@ def run_backtest():
     print(report_df.to_string(index=False))
     print("-" * 80 + "\n")
 
+    # Save the report to the reports folder
+    report_df.to_csv("reports/sip_10_year_comparison.csv", index=False)
+    print("📁 Report successfully saved to 'reports/sip_10_year_comparison.csv'\n")
+    
 if __name__ == "__main__":
     run_backtest()
